@@ -1,9 +1,10 @@
-package common
+package clients
 
 import (
 	"fmt"
 
 	"github.com/nsqio/go-nsq"
+	"github.com/panjf2000/loong/protocol"
 )
 
 type NSQClient struct {
@@ -19,7 +20,7 @@ type NSQClient struct {
 }
 
 //初始化消费端
-func NewClient(topic, channel string) NSQClient {
+func NewNsqClient(topic, channel string) NSQClient {
 	return NSQClient{
 		config:      nsq.NewConfig(),
 		channel:     channel,
@@ -66,6 +67,10 @@ func (n *NSQClient) Set(option string, value interface{}) {
 			n.err = err
 		}
 	}
+}
+
+func (n *NSQClient) Publish(proto *protocol.Protocol) error {
+	return nil
 }
 
 func (n *NSQClient) Receive(handler nsq.Handler) error {
