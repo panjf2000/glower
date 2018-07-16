@@ -1,1 +1,5 @@
 package loong
+
+func New()  {
+	
+}
