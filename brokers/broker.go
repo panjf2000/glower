@@ -9,7 +9,3 @@ type StandardBroker interface {
 	Publish(proto *protocol.Protocol) error
 	Receive() (protocol.ProtoMessage, error)
 }
-
-func NewNsqBroker(config config.BrokerConfig) () {
-	
-}
