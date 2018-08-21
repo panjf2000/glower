@@ -90,7 +90,6 @@ func (n *NSQClient) Receive(handler nsq.Handler) error {
 
 //连接到nsqd
 func (n *NSQClient) connect() error {
-
 	if len(n.nsqds) == 0 && len(n.nsqlookupds) == 0 {
 		return fmt.Errorf(`at least one "nsqd" or "nsqlookupd" address must be configured`)
 	}
