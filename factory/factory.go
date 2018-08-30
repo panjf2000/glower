@@ -10,6 +10,6 @@ type BrokerFactory struct {
 	backendConf config.BrokerConfig
 }
 
-func (bf BrokerFactory) ProduceBroker() (brokers.StandardBroker, error) {
+func (bf *BrokerFactory) ProduceBroker() (brokers.StandardBroker, error) {
 	return nil, nil
 }
