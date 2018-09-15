@@ -2,14 +2,14 @@ package factory
 
 import (
 	"github.com/panjf2000/loong/brokers"
+	"github.com/panjf2000/loong/backends"
 	"github.com/panjf2000/loong/config"
 )
 
-type BrokerFactory struct {
-	brokerConf config.BrokerConfig
-	backendConf config.BrokerConfig
+func ProduceBroker(conf config.Config) (brokers.StandardBroker, error) {
+	return nil, nil
 }
 
-func (bf *BrokerFactory) ProduceBroker() (brokers.StandardBroker, error) {
+func ProduceBackend(conf config.Config) (backends.standardBackend, error) {
 	return nil, nil
 }
