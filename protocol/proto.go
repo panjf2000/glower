@@ -24,7 +24,7 @@ type ProtoMessage struct {
 	ETA        *time.Time
 	Headers    Protocol
 	Args       []Params
-	conf       config.BrokerConfig
+	conf       config.Config
 }
 
 type ResultMessage struct {
