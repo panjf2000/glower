@@ -1,6 +1,10 @@
 package protocol
 
-import "time"
+import (
+	"time"
+
+	"github.com/panjf2000/loong/config"
+)
 
 type Params struct {
 	Type  string
@@ -20,6 +24,7 @@ type ProtoMessage struct {
 	ETA        *time.Time
 	Headers    Protocol
 	Args       []Params
+	conf       config.BrokerConfig
 }
 
 type ResultMessage struct {
