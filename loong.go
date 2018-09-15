@@ -19,6 +19,7 @@ func NewLoongClient(concurrency int, conf config.Config) (*LoongClient, error) {
 	backend, _ := factory.ProduceBackend(conf)
 	cls := &LoongClient{
 		conf:    conf,
+		concurrency: concurrency,
 		broker:  broker,
 		backend: backend,
 	}
