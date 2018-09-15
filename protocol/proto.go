@@ -7,6 +7,10 @@ type Params struct {
 	Value interface{}
 }
 
+type Processor interface {
+	Process(*ProtoMessage) error
+}
+
 type Protocol map[string]interface{}
 
 type ProtoMessage struct {
@@ -15,7 +19,7 @@ type ProtoMessage struct {
 	RoutingKey string
 	ETA        *time.Time
 	Headers    Protocol
-	params     []Params
+	Args       []Params
 }
 
 type ResultMessage struct {
