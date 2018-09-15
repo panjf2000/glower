@@ -1,5 +1,0 @@
-package loong
-
-func New()  {
-	
-}
