@@ -6,5 +6,5 @@ import (
 
 type StandardBroker interface {
 	Publish(message protocol.ProtoMessage) error
-	Receive() (protocol.ResultMessage, error)
+	Receive() (protocol.ProtoMessage, error)
 }

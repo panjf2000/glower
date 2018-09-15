@@ -19,4 +19,5 @@ type ProtoMessage struct {
 }
 
 type ResultMessage struct {
+	results []Params
 }
